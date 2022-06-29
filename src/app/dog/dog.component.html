@@ -1,0 +1,12 @@
+<div class="container">
+    <p>Tamanho: {{dog.fileSizeBytes}} Bytes</p>
+
+    <video *ngIf="isVideo" controls="" autoplay="" name="media">
+      <source src="{{dog?.url}}" type="video/mp4">
+    </video>
+
+    <img *ngIf="isFoto" src="{{dog?.url}}" width="425" height="500" />
+
+    <br/>
+    <button class="btn btn-primary" (click)="getDog()">Trocar</button>
+</div>
